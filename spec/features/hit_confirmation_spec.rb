@@ -7,5 +7,8 @@ feature 'View hit comfirmation' do
 
     visit('/attack')
     find('.hit-confirm', text: 'Name One Attacked Name Two')
+
+    visit('/play')
+    expect(page).to have_content '80'
   end
 end

@@ -1,11 +1,14 @@
 <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-  <div style="font-family: Arial; background: #00b7ff; padding: 1em 4em 1em 4em; margin-top: 3em; border-radius: 20px;">
+  <div style="font-family: Arial; background: #E1E1E1; padding: 1em 4em 1em 4em; margin-top: 3em; border-radius: 20px;">
     <h1><%= @player_one_name %><span style="font-size: 0.4em; padding: 0 3em 0 3em;">Vrs</span><%= @player_two_name %></h1>
-    <p class="hit">60</p>
+    <div style="display: inline-flex; width: 100%;">
+      <p style="justify-content: flex-start" class="hit-one"><%= @player_one_hp %></p>
+      <p style="margin-left: auto; order: 2;" class="hit-two"><%= @player_two_hp %></p>
+    </div>
   </div>
   <div style="margin-top: 2em;">
     <form action="/attack">
-      <input type="submit" value="Attack">
+      <input style="font-size: 2em;" type="submit" value="Attack">
     </form>
   </div>
 </div>
