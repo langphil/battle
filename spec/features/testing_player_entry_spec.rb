@@ -4,7 +4,7 @@ feature 'Testing player name entry' do
     fill_in('player_one', with: 'Name One')
     fill_in('player_two', with: 'Name Two')
     find_button('Submit').click
-    visit('/names')
+    visit('/play')
     page.has_content?('Name One')
     page.has_content?('Name Two')
   end
