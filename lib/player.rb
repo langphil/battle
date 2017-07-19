@@ -1,10 +1,8 @@
 class Player
 
-  def initialize(name)
-    $name = name
-  end
+  attr_reader :name
 
-  def print_name
-    self
+  def initialize(name)
+    @name = name
   end
 end
