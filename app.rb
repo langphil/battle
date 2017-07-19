@@ -9,7 +9,7 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    p params
+    # p params
     session[:player_one] = params[:player_one]
     session[:player_two] = params[:player_two]
     redirect '/play'
