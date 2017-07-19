@@ -4,5 +4,6 @@ feature 'View hit comfirmation' do
     visit('/play')
     find_button('Attack').click
     visit('/attack')
+    find('.hit-confirm', text: 'Name One Attacked Name Two')
   end
 end
