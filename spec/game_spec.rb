@@ -17,13 +17,6 @@ describe Game do
     end
   end
 
-  describe '#attack' do
-    it 'attacks another player' do
-      expect(diane).to receive(:receive_damage)
-      game.attack(diane)
-    end
-  end
-
   describe '#player_turn' do
     it 'will change the current player' do
       game.player_turn
