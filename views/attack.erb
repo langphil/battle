@@ -1,6 +1,6 @@
 <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
   <div style="text-align: center; font-family: Arial; background: #e1e1e1; padding: 1em 4em 1em 4em; margin-top: 3em; border-radius: 20px;">
-    <h2 class="hit-confirm"><%= @player_one_name %> <span style="color: red; margin: 0 2em 0 2em;">Attacked</span> <%= @player_two_name %></h2>
+    <h2 class="hit-confirm"><%= @game.player_1.name %> <span style="color: red; margin: 0 2em 0 2em;">Attacked</span> <%= @game.player_2.name %></h2>
     <form action="/play">
       <iframe src="https://giphy.com/embed/p3Tlnu6jY1cNq" width="480" height="226" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/battle-assemble-p3Tlnu6jY1cNq"></a></p>
       <input style="font-size: 2em;" type="submit" value="Return">
