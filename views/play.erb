@@ -4,12 +4,14 @@
     <div style="display: inline-flex; width: 100%;">
       <p style="justify-content: flex-start" class="hit-one"><%= @game.player_1.hp %></p>
       <p style="margin-left: auto; order: 2;" class="hit-two"><%= @game.player_2.hp %></p>
+    </div>
+    <div>
       <p><%= @game.current_player.name %>'s turn</p>
     </div>
-  </div>
-  <div style="margin-top: 2em;">
-    <form action="/attack">
-      <input style="font-size: 2em;" type="submit" value="Attack">
-    </form>
+    <div style="margin-top: 2em;">
+      <form action="/attack">
+        <input style="font-size: 2em;" type="submit" value="Attack">
+      </form>
+    </div>
   </div>
 </div>
