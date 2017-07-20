@@ -16,13 +16,6 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-    it 'attacks another player' do
-      expect(diane).to receive(:receive_damage)
-      coop.attack(diane)
-    end
-  end
-
   describe '#receive_damage' do
     it 'deducts 10 points when hit' do
       expect { coop.receive_damage }.to change { coop.hp }.by (-10)
