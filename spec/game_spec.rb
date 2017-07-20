@@ -23,4 +23,17 @@ describe Game do
       game.attack(diane)
     end
   end
+
+  describe '#player_turn' do
+    it 'will change the current player' do
+      game.player_turn
+      expect(game.current_player).to eq coop
+    end
+  end
+
+  describe '#current_player' do
+    it 'checks who the current player is' do
+      expect(game.current_player).to eq diane
+    end
+  end
 end
