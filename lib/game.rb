@@ -21,4 +21,12 @@ class Game
   def opponent(the_player)
     players.select { |p| p != the_player }.first
   end
+
+  def game_over?
+    players.map { |p| p.hp }.include?(0)
+  end
+
+  def loser
+    players.select { |p| p.hp == 0 }.first
+  end
 end

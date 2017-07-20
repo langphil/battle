@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require './lib/player'
 require './lib/game'
+require './lib/attack'
 
 class Battle < Sinatra::Base
 
@@ -27,9 +28,19 @@ class Battle < Sinatra::Base
     erb :attack
   end
 
+  get '/game-over' do
+    @game = $game
+    @loser = @game.loser
+    erb :gameover
+  end
+
   post '/switch-turns' do
     $game.player_turn
-    redirect '/play'
+    if $game.game_over?
+      redirect '/game-over'
+    else
+      redirect '/play'
+    end
   end
 
   # start the server if ruby file executed directly

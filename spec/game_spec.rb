@@ -29,4 +29,20 @@ describe Game do
       expect(game.current_player).to eq diane
     end
   end
+
+  describe '#game_over' do
+    it 'will know when a player has zero HP' do
+      allow(diane).to receive(:hp) { 0 }
+      allow(coop).to receive(:hp) { 0 }
+      expect(game).to be_game_over
+    end
+  end
+
+  describe '#loser' do
+    it 'will identify the loser - with zero HP' do
+      allow(diane).to receive(:hp) { 0 }
+      allow(coop).to receive(:hp) { 0 }
+      expect(game.loser).to eq diane
+    end
+  end
 end
