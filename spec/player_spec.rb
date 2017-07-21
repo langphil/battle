@@ -4,6 +4,8 @@ describe Player do
   subject(:coop) { described_class.new('Coop') }
   subject(:diane) { described_class.new('Diane')}
 
+  let(:damage) { rand(0..10) }
+
   describe "#name" do
     it 'has a player name' do
       expect(coop.name).to eq 'Coop'
@@ -17,8 +19,10 @@ describe Player do
   end
 
   describe '#receive_damage' do
-    it 'deducts 10 points when hit' do
-      expect { coop.receive_damage }.to change { coop.hp }.by (-10)
+
+    it 'randomly creates hit points' do
+      expect(coop).to receive(:damage).and_return(damage)
+      expect(coop.damage).to be damage
     end
   end
 end

@@ -10,6 +10,10 @@ class Player
   end
 
   def receive_damage
-    @hp -= 10
+    @hp -= damage
+  end
+
+  def damage
+    p rand(1..10)
   end
 end
